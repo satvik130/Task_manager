@@ -1,6 +1,6 @@
-import API from './axios'; // ✅ correct import now uses baseURL + withCredentials
+import API from './axios'; 
 
-// Get all users (admin only)
+
 export const getAllUsers = async (token) => {
   return API.get(`/admin/users`, {
     headers: {
@@ -9,7 +9,7 @@ export const getAllUsers = async (token) => {
   });
 };
 
-// Delete a user by ID (admin only)
+
 export const deleteUser = async (id, token) => {
   return API.delete(`/admin/users/${id}`, {
     headers: {
