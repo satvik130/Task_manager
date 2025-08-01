@@ -3,14 +3,14 @@ const {
   registerUser,
   loginUser,
   getProfile,
-} = require("../controllers/AuthController"); // ✅ Ensure the path is correct
+} = require("../controllers/AuthController"); 
 
-const { protect } = require("../middlewares/auth"); // ✅ Use correct middleware name
+const { protect } = require("../middlewares/auth"); 
 
 const router = express.Router();
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.get("/profile", protect, getProfile); // ✅ This is your protected route
+router.get("/profile", protect, getProfile); 
 
 module.exports = router;
