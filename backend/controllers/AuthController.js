@@ -1,8 +1,7 @@
 const User = require("../models/User");
 const generateToken = require("../config/jwt");
 
-// @desc    Register new user
-// @route   POST /api/auth/register
+
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -18,7 +17,6 @@ exports.registerUser = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    // Only allow "admin" role if manually passed from backend (for safety)
     const userRole = role === "admin" ? "admin" : "user";
 
     const user = await User.create({
@@ -39,8 +37,7 @@ exports.registerUser = async (req, res) => {
     res.status(500).json({ message: "Registration failed", error: err.message });
   }
 };
-// @desc    Login user
-// @route   POST /api/auth/login
+
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -72,8 +69,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-// @desc    Get logged-in user profile
-// @route   GET /api/auth/profile
+
 exports.getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
