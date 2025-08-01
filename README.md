@@ -77,7 +77,8 @@ npm install
 npm run dev             # Starts frontend on http://localhost:3000
 ```
 
-## API DOCUMENTATION
-Postman collection:https://web.postman.co/workspace/My-Workspace~f806cbcf-a219-4fa9-8422-b42a8d4aff0b/collection/36021915-e10b799a-a073-48a3-94b2-425158abe6b9?action=share&source=copy-link&creator=36021915
+## DOCKER USAGE
+docker-compose up --build
+
 
 
