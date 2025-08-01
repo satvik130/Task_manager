@@ -10,7 +10,7 @@ const isAdmin = require("../middlewares/isAdmin");
 
 const router = express.Router();
 
-// ✅ Apply middleware to all routes
+
 router.use(protect, isAdmin);
 
 router.get("/users", getAllUsers);
