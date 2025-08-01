@@ -21,20 +21,20 @@ const Login = () => {
       // Save token
       localStorage.setItem('token', res.data.token);
 
-      // Dispatch user with role to redux
+    
       dispatch(
         loginSuccess({
           user: {
             _id: res.data.user._id,
             name: res.data.user.name,
             email: res.data.user.email,
-            role: res.data.user.role, // ✅ Store role
+            role: res.data.user.role,
           },
           token: res.data.token,
         })
       );
 
-      // Navigate based on role
+    
       if (res.data.user.role === 'admin') {
         navigate('/admin');
       } else {
