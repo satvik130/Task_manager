@@ -14,7 +14,7 @@ exports.getTasks = async (req, res) => {
   try {
     const { status, priority, search, sortBy, page = 1, limit = 10 } = req.query;
 
-    const query = { assignedTo: req.user.id };  // 👈 Correct field
+    const query = { assignedTo: req.user.id };  
 
     if (status) query.status = status;
     if (priority) query.priority = priority;
@@ -38,7 +38,7 @@ exports.getTasks = async (req, res) => {
 exports.updateTask = async (req, res) => {
   try {
     const task = await Task.findOneAndUpdate(
-      { _id: req.params.id, assignedTo: req.user.id },  // 👈 Use assignedTo here
+      { _id: req.params.id, assignedTo: req.user.id },  
       req.body,
       { new: true }
     );
@@ -57,7 +57,7 @@ exports.deleteTask = async (req, res) => {
   try {
     const task = await Task.findOneAndDelete({
       _id: req.params.id,
-      assignedTo: req.user.id   // 👈 Match by assignedTo
+      assignedTo: req.user.id  
     });
 
     if (!task) {
