@@ -52,10 +52,13 @@ TASK_MANAGER/
 
 ### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/<your_username>/TASK_MANAGER.git
 cd TASK_MANAGER
-2. Setup Backend
+```
+
+### 2. Setup Backend
+```
 bash
 Copy
 Edit
@@ -63,13 +66,16 @@ cd backend
 npm install
 cp .env.example .env    # Create a .env file with your config
 npm run dev             # Starts backend on http://localhost:4000
-3. Setup Frontend
+```
+### 3. Setup Frontend
+```
 bash
 Copy
 Edit
 cd ..
 npm install
 npm run dev             # Starts frontend on http://localhost:3000
+```
 
 ## API DOCUMENTATION
 Postman collection:https://web.postman.co/workspace/My-Workspace~f806cbcf-a219-4fa9-8422-b42a8d4aff0b/collection/36021915-e10b799a-a073-48a3-94b2-425158abe6b9?action=share&source=copy-link&creator=36021915
