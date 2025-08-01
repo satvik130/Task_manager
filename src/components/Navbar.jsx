@@ -39,7 +39,7 @@ const Navbar = () => {
               Profile
             </Link>
 
-            {/* ✅ Admin Panel Button (Only for Admin) */}
+           
             {user?.role === "admin" && (
               <Link
                 to="/admin"
