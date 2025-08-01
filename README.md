@@ -80,5 +80,10 @@ npm run dev             # Starts frontend on http://localhost:3000
 ## DOCKER USAGE
 docker-compose up --build
 
+## Testing
+-All routes tested via Postman
+
+-Auth headers required for protected routes
+
 
 
