@@ -30,13 +30,27 @@ exports.registerUser = async (req, res) => {
 
     res.status(201).json({
       message: "User registered successfully",
-      user: { _id: user._id, name: user.name, email: user.email, role: user.role },
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
       token,
     });
   } catch (err) {
-    res.status(500).json({ message: "Registration failed", error: err.message });
+    if (err.name === "ValidationError") {
+      const messages = Object.values(err.errors).map((e) => e.message);
+      return res.status(400).json({ message: messages.join(", ") });
+    }
+
+    res.status(500).json({
+      message: "Registration failed",
+      error: err.message,
+    });
   }
 };
+
 
 exports.loginUser = async (req, res) => {
   try {
