@@ -9,7 +9,7 @@ This project was developed as part of a Full-Stack Developer Assignment and incl
 
 - **Backend:** Backend is hoisted on Render.
 - **Frontend:** Frontend is hoisted on Vercel.
-- **LINK**: https://task-manager-bay-mu-56.vercel.app/.
+- **LINK**: https://task-manager-iota-ten.vercel.app/.
 
 ---
 
