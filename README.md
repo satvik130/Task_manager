@@ -4,6 +4,13 @@ A full-stack task management web application built with **React**, **Node.js**, 
 
 This project was developed as part of a Full-Stack Developer Assignment and includes full JWT authentication, role-based access (admin vs. regular users), CRUD operations, file uploads, and filtering/sorting of tasks.
 
+
+# Hoisted on
+
+- **Backend:** Backend is hoisted on Render.
+- **Frontend:** Frontend is hoisted on Vercel.
+- **LINK**: https://task-manager-bay-mu-56.vercel.app/.
+
 ---
 
 ## 📁 Project Structure
